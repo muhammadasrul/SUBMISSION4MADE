@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    app:cardCornerRadius="5dp"
+    android:layout_gravity="center"
+    android:id="@+id/cvMovie">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="8dp">
+        <ImageView
+            android:id="@+id/img_poster"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            tools:src="@color/colorAccent"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/movie_poster"/>
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Movie Title"
+            android:layout_toEndOf="@+id/img_poster"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:maxLines="2"
+            android:ellipsize="end"/>
+        <TextView
+            android:id="@+id/tv_release"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="February 20, 2020"
+            android:layout_toEndOf="@+id/img_poster"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginStart="16dp"
+            android:textStyle="italic"
+            android:textSize="16sp"
+            android:layout_marginBottom="18dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/img_poster"
+            android:layout_marginStart="12dp"
+            android:layout_marginBottom="16dp"
+            android:stretchColumns="*"
+            android:layout_alignParentBottom="true">
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:src="@drawable/baseline_star_24"
+                    android:contentDescription="@string/user_score"/>
+
+                <TextView
+                    android:id="@+id/tv_user_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="9/10"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_timeline_24"
+                    android:contentDescription="@string/popularity"/>
+
+                <TextView
+                    android:id="@+id/tv_popularity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="67631"
+                    android:layout_gravity="center_vertical"/>
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
